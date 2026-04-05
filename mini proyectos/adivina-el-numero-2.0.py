@@ -10,7 +10,7 @@ Dificil (D)
 # define la dificultad elejida (numero minimo, numero maximo, intentos disponibles)
 
 
-def modo_dificultad(elegir):
+def modo_dificultad(_elegir):
     if dificultad == "f":
         return 1, 10, 3
     elif dificultad == "n":
