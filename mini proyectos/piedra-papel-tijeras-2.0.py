@@ -9,10 +9,13 @@ def jugar():
         "papel": "piedra"
     }
 
-    usuario = input("Elije: piedra, papel o tijeras: ").lower()
-
-    if usuario not in reglas:
-        quit("Opcion no valida.")
+    while True:
+        usuario = input("Elije: piedra, papel o tijeras: ").lower()
+        if usuario not in reglas:
+            print("Opcion no valida.")
+            continue
+        else:
+            break
 
     # toma solo las keys del diccionario: reglas{} y luego las convierte en una lista[] y luego elige un elemento al azar de dicha lista
     computadora = random.choice(list(reglas.keys()))
@@ -63,9 +66,8 @@ PUNTAJE_USUARIO = 0
 PUNTAJE_COMPUTADORA = 0
 contador = rondas()
 
-while contador > 0:
+for i in range(contador):
     RONDA = jugar()
-    contador -= 1
     PUNTAJE_USUARIO, PUNTAJE_COMPUTADORA = incrementar(
         PUNTAJE_USUARIO, PUNTAJE_COMPUTADORA, RONDA)
 
