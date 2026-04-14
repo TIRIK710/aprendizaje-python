@@ -4,10 +4,10 @@ while True:
     
     num2 = input("unidad a convertir: Celcius-Fahrenheit o Fahrenheit-Celcius").lower()
     
-    if num2 == "fahrenheit-celcius":
+    if num2 == "fahrenheit":
         resultado = num1 - 32 / 1.8
         break
-    elif num2 == "celcius-fahrenheit":
+    elif num2 == "celcius":
         resultado = num1 * 1.8 + 32
         break
     else:
