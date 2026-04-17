@@ -34,9 +34,10 @@ def jugar():
 
 def rondas():
     lista_rondas = ["1", "3", "5", "7"]
-    """Solicita al usuario que elija el número de rondas a jugar (1, 3 o 5)."""
+    # Solicita al usuario que elija el número de rondas a jugar (1, 3 o 5).
     while True:
-        elejir = input(f"Cuantas rondas quieres jugar?: {', '.join(lista_rondas)}")
+        elejir = input(
+            f"Cuantas rondas quieres jugar?: {', '.join(lista_rondas)}")
         if elejir not in lista_rondas:
             print("Intenta otra vez")
             continue
