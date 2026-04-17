@@ -1,7 +1,7 @@
 lenguajes = ["Python", "Ruby", "PHP", "Javascript", "Java"]  # lista
 print("1.", lenguajes)
 
-lenguajes.insert(3, "Go")  # insertar "Go" como 4to elemento de la lista
+lenguajes.insert("Go")  # insertar "Go" como 4to elemento de la lista
 print("2.", lenguajes)
 
 lenguajes.insert(0, "C")  # insert "C" como 1er elemento de la lista
