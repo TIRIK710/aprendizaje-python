@@ -1,10 +1,4 @@
-print("Bienvenido a la app Calculadora")
-
-num1 = float(input("ingrese el primer numero"))
-
-operacion = input("Ingrese la operacion que desea realizar: (+) (-) (x) (/)")
-
-num2 = float(input("ingrese el segundo numero"))
+operaciones = ["+", "-", "x", "/"]
 
 # functions
 def sumar():
@@ -20,6 +14,30 @@ def multiplicar():
     return result
 
 def dividir():
-    result = num1 / num2
-    return result
+    if num1 == 0 or num2 == 0:
+        return "indeterminado"
+    else:
+        result = num1 / num2
+        return result
+
+print("Bienvenido a la app Calculadora")
+
+num1 = float(input("ingrese el primer numero: "))
+
+operacion = input(f"""Ingrese la operacion que desea realizar: {operaciones}
+""")
+
+num2 = float(input("ingrese el segundo numero: "))
+
+if operacion not in operaciones:
+    print("la operacion ingresada no es valida")    
+else:
+    if operacion == "+":
+        print(f"el resultado es: {sumar()}")
+    elif operacion == "-":
+        print(f"el resultado es: {restar()}")
+    elif operacion == "*":
+        print(f"el resultado es: {multiplicar()}")
+    elif operacion == "/":
+        print(f"el resultado es: {dividir()}")
 
