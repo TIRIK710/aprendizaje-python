@@ -1,3 +1,4 @@
+# available operations
 operaciones = ["+", "-", "x", "/"]
 
 # functions
