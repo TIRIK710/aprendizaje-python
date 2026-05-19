@@ -20,18 +20,21 @@ def dividir():
         result = num1 / num2
         return result
 
-print("Bienvenido a la app Calculadora")
+# menu
+while True:
+    
+    print("Bienvenido a la app Calculadora")
 
-num1 = float(input("ingrese el primer numero: "))
+    num1 = float(input("ingrese el primer numero: "))
+    
+    operacion = input(f"""Ingrese la operacion que desea realizar: {operaciones}: """)
+    if operacion not in operaciones:
+        print("la operacion ingresada no es valida")
+        continue
 
-operacion = input(f"""Ingrese la operacion que desea realizar: {operaciones}
-""")
+    num2 = float(input("ingrese el segundo numero: "))
 
-num2 = float(input("ingrese el segundo numero: "))
-
-if operacion not in operaciones:
-    print("la operacion ingresada no es valida")    
-else:
+      
     if operacion == "+":
         print(f"el resultado es: {sumar()}")
     elif operacion == "-":
@@ -40,4 +43,4 @@ else:
         print(f"el resultado es: {multiplicar()}")
     elif operacion == "/":
         print(f"el resultado es: {dividir()}")
-
+    break
