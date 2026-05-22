@@ -15,8 +15,11 @@ def multiplicar():
     return result
 
 def dividir():
-    if num1 == 0 or num2 == 0:
-        return "indeterminado"
+    if num1 == 0 and num2 != 0:
+        result = num1 / num2
+        return result
+    elif num1 != 0 and num2 == 0:
+        return "Indeterminado"
     else:
         result = num1 / num2
         return result
