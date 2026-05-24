@@ -2,26 +2,26 @@
 operaciones = ["+", "-", "x", "/"]
 
 # functions
-def sumar():
-    result = num1 + num2
+def sumar(sum1, sum2):
+    result = sum1 + sum2
     return result
 
-def restar():
-    result = num1 - num2
+def restar(res1, res2):
+    result = res1 - res2
     return result
 
-def multiplicar():
-    result = num1 * num2
+def multiplicar(mul1, mul2):
+    result = mul1 * mul2
     return result
 
-def dividir():
-    if num1 == 0 and num2 != 0:
-        result = num1 / num2
+def dividir(div1, div2):
+    if div1 == 0 and div2 != 0:
+        result = div1 / div2
         return result
-    elif num1 != 0 and num2 == 0:
+    elif div1 != 0 and div2 == 0:
         return "Indeterminado"
     else:
-        result = num1 / num2
+        result = div1 / div2
         return result
 
 # menu
@@ -40,11 +40,13 @@ while True:
 
       
     if operacion == "+":
-        print(f"el resultado es: {sumar()}")
+        print(f"el resultado es: {sumar(num1, num2)}")
     elif operacion == "-":
-        print(f"el resultado es: {restar()}")
+        print(f"el resultado es: {restar(num1, num2)}")
     elif operacion == "*":
-        print(f"el resultado es: {multiplicar()}")
+        print(f"el resultado es: {multiplicar(num1, num2)}")
     elif operacion == "/":
-        print(f"el resultado es: {dividir()}")
+        print(f"el resultado es: {dividir(num1, num2)}")
     break
+
+    
