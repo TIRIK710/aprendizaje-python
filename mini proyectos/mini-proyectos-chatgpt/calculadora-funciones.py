@@ -30,8 +30,7 @@ while True:
     print("Bienvenido a la app Calculadora")
 
     num1 = float(input("ingrese el primer numero: "))
-    
-    operacion = input(f"""Ingrese la operacion que desea realizar: {operaciones}: """)
+    operacion = input(f"Ingrese la operacion que desea realizar: {", ".join(operaciones)}: ")
     if operacion not in operaciones:
         print("la operacion ingresada no es valida")
         continue
@@ -47,6 +46,14 @@ while True:
         print(f"el resultado es: {multiplicar(num1, num2)}")
     elif operacion == "/":
         print(f"el resultado es: {dividir(num1, num2)}")
-    break
 
-    
+    # close app
+    close = input("Desea volver al inicio? Y/N: ").lower()
+
+    if close == "y":
+        continue
+    elif close == "n":
+        print("Cerrando...")
+        break
+    else:
+        print("Accion no reconocida. Intentalo denuevo")
