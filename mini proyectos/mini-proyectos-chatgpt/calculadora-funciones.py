@@ -1,28 +1,22 @@
 # available operations
-operaciones = ["+", "-", "x", "/"]
+operaciones = ["+", "-", "*", "/"]
 
 # functions
-def sumar(sum1, sum2):
-    result = sum1 + sum2
-    return result
+def sumar(a, b):
+    return a + b
 
-def restar(res1, res2):
-    result = res1 - res2
-    return result
 
-def multiplicar(mul1, mul2):
-    result = mul1 * mul2
-    return result
+def restar(a, b):
+    return a - b
 
-def dividir(div1, div2):
-    if div1 == 0 and div2 != 0:
-        result = div1 / div2
-        return result
-    elif div1 != 0 and div2 == 0:
+def multiplicar(a, b):
+    return a * b
+    
+
+def dividir(a, b):
+    if b == 0:
         return "Indeterminado"
-    else:
-        result = div1 / div2
-        return result
+    return a / b
 
 # menu
 while True:
