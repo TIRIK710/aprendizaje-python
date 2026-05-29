@@ -1,5 +1,5 @@
 # available operations
-operaciones = ["+", "-", "*", "/"]
+operaciones = ("+", "-", "*", "/")
 
 # functions
 def sumar(a, b):
